@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produit | MOVA</title>
+    <link rel="stylesheet" href="produit.css">
+    <script src="produit.js" defer></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="accueil.html" class="logo">MOVA</a>
+
+        <nav class="navigation">
+            <a href="accueil.html">Accueil</a>
+            <a href="boutique.html" class="active">Boutique</a>
+            <a href="boutique.html#categories">Catégories</a>
+            <a href="panier.html">Panier <span id="cart-count">0</span></a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <div class="breadcrumb">
+            <a href="accueil.html">Accueil</a>
+            <span>/</span>
+            <a href="boutique.html">Boutique</a>
+            <span>/</span>
+            <span id="breadcrumb-product">Produit</span>
+        </div>
+
+
+        <section class="product-detail">
+
+            <div class="product-gallery">
+                <img id="main-image" src="" alt="Photo du produit">
+            </div>
+
+
+            <div class="product-information">
+
+                <p class="product-category" id="product-category"></p>
+
+                <h1 id="product-name">Chargement...</h1>
+
+                <p class="product-price" id="product-price"></p>
+
+                <p class="product-description" id="product-description"></p>
+
+                <div class="quantity-section">
+                    <label for="quantity">Quantité</label>
+
+                    <div class="quantity-control">
+                        <button id="minus" type="button">−</button>
+                        <input type="number" id="quantity" value="1" min="1" max="10">
+                        <button id="plus" type="button">+</button>
+                    </div>
+                </div>
+
+                <button id="add-to-cart" class="add-button">
+                    Ajouter au panier
+                </button>
+
+                <p id="cart-message" class="cart-message"></p>
+
+                <div class="product-details">
+                    <div>
+                        <strong>Livraison</strong>
+                        <p>Informations de livraison à venir.</p>
+                    </div>
+
+                    <div>
+                        <strong>Retours</strong>
+                        <p>Consulte nos conditions de retour.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="back-to-shop">
+            <a href="boutique.html">← Retour à la boutique</a>
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+        <a href="accueil.html" class="footer-logo">MOVA</a>
+        <p>SPORT · MOVE · LIVE</p>
+        <p>© 2026 MOVA — Tous droits réservés</p>
+    </footer>
+
+</body>
+</html>

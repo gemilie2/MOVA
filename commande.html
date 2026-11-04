@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVA | Finaliser ma commande</title>
+    <link rel="stylesheet" href="commande.css">
+    <script src="commande.js" defer></script>
+</head>
+
+<body>
+
+<header class="header">
+    <a href="accueil.html" class="logo">MOVA<span>.</span></a>
+
+    <nav>
+        <a href="accueil.html">Accueil</a>
+        <a href="boutique.html">Boutique</a>
+        <a href="boutique.html#categories">Catégories</a>
+        <a href="panier.html">Panier</a>
+    </nav>
+</header>
+
+<main class="checkout-page">
+
+    <div class="page-heading">
+        <p class="eyebrow">DERNIÈRE ÉTAPE</p>
+        <h1>Finaliser ma commande</h1>
+        <p>Quelques informations avant de valider votre commande.</p>
+    </div>
+
+    <div class="checkout-layout">
+
+        <form id="order-form" class="checkout-form">
+
+            <section class="form-section">
+                <h2>01. Informations personnelles</h2>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="firstname">Prénom</label>
+                        <input type="text" id="firstname" name="firstname" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastname">Nom</label>
+                        <input type="text" id="lastname" name="lastname" required>
+                    </div>
+
+                    <div class="form-group full">
+                        <label for="email">Adresse e-mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group full">
+                        <label for="phone">Téléphone</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>02. Adresse de livraison</h2>
+
+                <div class="form-grid">
+
+                    <div class="form-group full">
+                        <label for="address">Adresse</label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="postal">Code postal</label>
+                        <input type="text" id="postal" name="postal" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">Ville</label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+
+                    <div class="form-group full">
+                        <label for="country">Pays</label>
+                        <select id="country" name="country" required>
+                            <option value="France">France</option>
+                            <option value="Belgique">Belgique</option>
+                            <option value="Suisse">Suisse</option>
+                            <option value="Luxembourg">Luxembourg</option>
+                        </select>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>03. Paiement</h2>
+
+                <p class="payment-info">
+                    Le paiement en ligne sera disponible lorsque le système
+                    de paiement sécurisé de MOVA sera configuré.
+                </p>
+
+                <p class="payment-placeholder">
+                    Paiement non disponible dans cette version de démonstration.
+                </p>
+            </section>
+
+            <button type="submit" class="button confirm-button">
+                Confirmer la commande de démonstration
+            </button>
+
+            <a href="panier.html" class="back-link">← Retour au panier</a>
+
+        </form>
+
+        <aside class="order-summary">
+
+            <h2>Votre commande</h2>
+
+            <div id="order-items"></div>
+
+            <div class="summary-divider"></div>
+
+            <div class="summary-line">
+                <span>Sous-total</span>
+                <strong id="order-subtotal">0.00 €</strong>
+            </div>
+
+            <div class="summary-line">
+                <span>Livraison</span>
+                <strong id="order-shipping">4.90 €</strong>
+            </div>
+
+            <div class="summary-divider"></div>
+
+            <div class="summary-line total-line">
+                <span>Total</span>
+                <strong id="order-total">0.00 €</strong>
+            </div>
+
+        </aside>
+
+    </div>
+
+</main>
+
+<footer class="footer">
+    <a href="accueil.html" class="logo">MOVA<span>.</span></a>
+    <p>SPORT · MOVE · LIVE</p>
+    <p>© 2026 MOVA. Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>

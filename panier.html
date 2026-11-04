@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVA | Mon panier</title>
+    <link rel="stylesheet" href="panier.css">
+    <script src="panier.js" defer></script>
+</head>
+
+<body>
+
+<header class="header">
+    <a href="accueil.html" class="logo">MOVA<span>.</span></a>
+
+    <nav>
+        <a href="accueil.html">Accueil</a>
+        <a href="boutique.html">Boutique</a>
+        <a href="panier.html" class="active">Panier</a>
+    </nav>
+</header>
+
+<main class="cart-page">
+
+    <div class="page-heading">
+        <p class="eyebrow">VOTRE SÉLECTION</p>
+        <h1>Mon panier</h1>
+        <p>Retrouvez ici les articles que vous avez sélectionnés.</p>
+    </div>
+
+    <div class="cart-layout">
+
+        <section class="cart-products">
+
+            <div class="section-heading">
+                <h2>Articles sélectionnés</h2>
+                <a href="boutique.html">Continuer mes achats</a>
+            </div>
+
+            <div id="cart-items"></div>
+
+            <div id="empty-cart" class="empty-cart" style="display: none;">
+                <p>Votre panier est encore vide.</p>
+                <a href="boutique.html" class="button">Découvrir la boutique</a>
+            </div>
+
+        </section>
+
+        <aside class="cart-summary">
+
+            <h2>Résumé de la commande</h2>
+
+            <div class="summary-line">
+                <span>Sous-total</span>
+                <strong id="subtotal">0.00 €</strong>
+            </div>
+
+            <div class="summary-line">
+                <span>Livraison</span>
+                <strong id="shipping">Gratuite</strong>
+            </div>
+
+            <div class="summary-divider"></div>
+
+            <div class="summary-line total-line">
+                <span>Total</span>
+                <strong id="total">0.00 €</strong>
+            </div>
+
+            <p class="shipping-note">
+                Livraison gratuite à partir de 50 € d'achat.
+            </p>
+
+            <button id="checkout-button" class="button checkout-button">
+                Valider mon panier et payer
+            </button>
+
+            <p class="secure-note">Paiement sécurisé · Service client</p>
+
+        </aside>
+
+    </div>
+
+</main>
+
+<footer class="footer">
+    <a href="accueil.html" class="logo">MOVA<span>.</span></a>
+    <p>SPORT · MOVE · LIVE</p>
+    <p>© 2026 MOVA. Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>

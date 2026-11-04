@@ -1,0 +1,348 @@
+
+:root {
+    --beige: #e9dfd2;
+    --cream: #f8f5ef;
+    --white: #ffffff;
+    --black: #25231f;
+    --grey: #77716a;
+    --border: #e7e1d9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--cream);
+    color: var(--black);
+}
+
+/* HEADER */
+
+.header {
+    height: 85px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--cream);
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-size: 29px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: var(--black);
+    text-decoration: none;
+}
+
+.logo span {
+    color: #b59b7c;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 13px;
+    transition: opacity 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    opacity: 0.55;
+}
+
+/* PAGE */
+
+.cart-page {
+    max-width: 1200px;
+    margin: auto;
+    padding: 75px 30px 100px;
+}
+
+.page-heading {
+    margin-bottom: 55px;
+}
+
+.eyebrow {
+    color: var(--grey);
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.page-heading h1 {
+    font-size: 46px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.page-heading p:last-child {
+    color: var(--grey);
+    font-size: 14px;
+}
+
+/* LAYOUT */
+
+.cart-layout {
+    display: grid;
+    grid-template-columns: 1.7fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.section-heading h2,
+.cart-summary h2 {
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.section-heading a {
+    font-size: 12px;
+    color: var(--grey);
+    text-decoration: underline;
+}
+
+/* PRODUITS DU PANIER */
+
+#cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 120px 1fr auto;
+    gap: 22px;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.cart-item img {
+    width: 120px;
+    height: 125px;
+    object-fit: cover;
+    background: var(--beige);
+}
+
+.cart-item-info h3 {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.cart-item-info p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.quantity-controls button {
+    width: 25px;
+    height: 25px;
+    border: 1px solid var(--border);
+    background: transparent;
+    cursor: pointer;
+}
+
+.quantity-controls span {
+    font-size: 13px;
+}
+
+.cart-item-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+}
+
+.cart-item-price strong {
+    font-size: 14px;
+}
+
+.remove {
+    border: none;
+    background: none;
+    color: var(--grey);
+    text-decoration: underline;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+/* PANIER VIDE */
+
+.empty-cart {
+    padding: 45px 20px;
+    text-align: center;
+    background: var(--white);
+}
+
+.empty-cart p {
+    color: var(--grey);
+    margin-bottom: 25px;
+}
+
+/* RÉSUMÉ */
+
+.cart-summary {
+    padding: 30px;
+    background: var(--white);
+}
+
+.cart-summary h2 {
+    margin-bottom: 30px;
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    font-size: 13px;
+}
+
+.summary-line strong {
+    font-weight: 500;
+}
+
+.summary-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 25px 0;
+}
+
+.total-line {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.shipping-note {
+    color: var(--grey);
+    font-size: 11px;
+    line-height: 1.6;
+    margin: 25px 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 16px 25px;
+    background: var(--black);
+    color: var(--white);
+    border: none;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background: #514b43;
+}
+
+.checkout-button {
+    width: 100%;
+}
+
+.secure-note {
+    text-align: center;
+    color: var(--grey);
+    font-size: 10px;
+    margin-top: 20px;
+}
+
+/* FOOTER */
+
+.footer {
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+.footer .logo {
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.footer p {
+    color: var(--grey);
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+    .header {
+        padding: 0 5%;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .cart-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 550px) {
+    .header {
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .page-heading h1 {
+        font-size: 35px;
+    }
+
+    .cart-item {
+        grid-template-columns: 85px 1fr;
+        gap: 15px;
+    }
+
+    .cart-item img {
+        width: 85px;
+        height: 100px;
+    }
+
+    .cart-item-price {
+        grid-column: 2;
+        align-items: flex-start;
+    }
+
+    .cart-summary {
+        padding: 22px;
+    }
+}

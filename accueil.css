@@ -1,0 +1,427 @@
+
+/* ========================================
+   1. PARAMÈTRES GÉNÉRAUX
+======================================== */
+
+:root {
+    --beige: #e9dfd2;
+    --cream: #f8f5ef;
+    --white: #ffffff;
+    --black: #25231f;
+    --grey: #77716a;
+    --light-beige: #f0e8de;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--cream);
+    color: var(--black);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* ========================================
+   2. EN-TÊTE ET NAVIGATION
+======================================== */
+
+.header {
+    width: 100%;
+    min-height: 85px;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--cream);
+    border-bottom: 1px solid #e5ddd3;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: box-shadow 0.3s ease;
+}
+
+.header.scrolled {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.logo {
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.navigation a {
+    font-size: 14px;
+    position: relative;
+    transition: opacity 0.3s ease;
+}
+
+.navigation a:hover {
+    opacity: 0.6;
+}
+
+.navigation a.active::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: var(--black);
+    bottom: -7px;
+    left: 0;
+}
+
+.header-icons {
+    display: flex;
+    gap: 22px;
+    align-items: center;
+}
+
+.header-icons a {
+    font-size: 27px;
+    transition: transform 0.3s ease;
+}
+
+.header-icons a:hover {
+    transform: scale(1.15);
+}
+
+
+/* ========================================
+   3. SECTION PRINCIPALE
+======================================== */
+
+.hero {
+    min-height: 510px;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    background-color: var(--beige);
+    overflow: hidden;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 70px 12%;
+    animation: appear 0.9s ease both;
+}
+
+.hero-small-title {
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+    color: var(--grey);
+}
+
+.hero h1 {
+    font-size: clamp(48px, 6vw, 76px);
+    line-height: 0.98;
+    letter-spacing: -3px;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #575149;
+    max-width: 350px;
+    margin-bottom: 30px;
+}
+
+.main-button {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 16px 27px;
+    border-radius: 35px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.main-button:hover {
+    background-color: #514b43;
+    transform: translateY(-3px);
+}
+
+.hero-image {
+    height: 510px;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.hero-image:hover img {
+    transform: scale(1.04);
+}
+
+
+/* ========================================
+   4. CATÉGORIES
+======================================== */
+
+.categories {
+    padding: 75px 7%;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.section-title span {
+    height: 1px;
+    flex: 1;
+    background-color: #cfc5b8;
+}
+
+.section-title h2 {
+    font-size: 27px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.category-card {
+    text-align: center;
+    display: block;
+    overflow: hidden;
+}
+
+.category-card img {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.6s ease;
+}
+
+.category-card:hover img {
+    transform: scale(1.035);
+}
+
+.category-card h3 {
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 14px;
+    transition: letter-spacing 0.3s ease;
+}
+
+.category-card:hover h3 {
+    letter-spacing: 1px;
+}
+
+
+/* ========================================
+   5. AVANTAGES
+======================================== */
+
+.advantages {
+    background-color: #eee3d7;
+    padding: 30px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.advantage {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.advantage span {
+    font-size: 30px;
+}
+
+.advantage p {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   6. PIED DE PAGE
+======================================== */
+
+.footer {
+    padding: 35px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    flex-wrap: wrap;
+    background-color: var(--cream);
+}
+
+.footer-logo {
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-links a {
+    font-size: 11px;
+    color: var(--grey);
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--black);
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    font-size: 11px;
+    color: var(--grey);
+    margin-top: 10px;
+}
+
+
+/* ========================================
+   7. ANIMATIONS
+======================================== */
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ========================================
+   8. VERSION TÉLÉPHONE
+======================================== */
+
+@media (max-width: 800px) {
+
+    .header {
+        padding: 20px 5%;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .navigation {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content {
+        padding: 65px 8%;
+    }
+
+    .hero-image {
+        height: 350px;
+    }
+
+    .categories {
+        padding: 55px 6%;
+    }
+
+    .category-card img {
+        height: 190px;
+    }
+
+    .advantages {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px 10%;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 29px;
+    }
+
+    .navigation {
+        gap: 14px;
+    }
+
+    .navigation a {
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .category-card img {
+        height: 230px;
+    }
+
+    .section-title h2 {
+        font-size: 22px;
+    }
+
+}

@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutique | MOVA</title>
+    <link rel="stylesheet" href="boutique.css">
+    <script src="boutique.js" defer></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="accueil.html" class="logo">MOVA</a>
+
+        <nav class="navigation">
+            <a href="accueil.html">Accueil</a>
+            <a href="boutique.html" class="active">Boutique</a>
+            <a href="panier.html">Panier <span id="cart-count">0</span></a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="shop-intro">
+            <p class="eyebrow">DÉCOUVRE NOTRE SÉLECTION</p>
+            <h1>La boutique MOVA</h1>
+            <p>Les essentiels pour accompagner chacun de tes mouvements.</p>
+        </section>
+
+        <section class="shop-content" id="categories">
+
+            <div class="shop-heading">
+                <h2>Nos produits</h2>
+
+                <select id="sort-products">
+                    <option value="default">Trier par défaut</option>
+                    <option value="price-asc">Prix croissant</option>
+                    <option value="price-desc">Prix décroissant</option>
+                </select>
+            </div>
+
+            <div class="filters">
+                <button class="filter active" data-category="all">Tout</button>
+                <button class="filter" data-category="fitness">Fitness</button>
+                <button class="filter" data-category="yoga">Yoga & Pilates</button>
+                <button class="filter" data-category="running">Running</button>
+                <button class="filter" data-category="accessoires">Accessoires</button>
+            </div>
+
+            <div class="product-grid" id="product-grid">
+                <!-- Les produits seront ajoutés par JavaScript -->
+            </div>
+
+            <p id="no-products" class="no-products" hidden>
+                Aucun produit dans cette catégorie.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <a href="accueil.html" class="footer-logo">MOVA</a>
+        <p>SPORT · MOVE · LIVE</p>
+        <p>© 2026 MOVA — Tous droits réservés</p>
+    </footer>
+
+</body>
+</html>
